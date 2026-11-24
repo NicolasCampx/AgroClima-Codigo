@@ -1,5 +1,5 @@
-# AgroClima — Código do aplicativo
+# AgroClima - Codigo do aplicativo
 
-Baixe e extraia AgroClima_Codigo.zip. Na pasta extraída, execute instalar.bat e depois xecutar.bat.
+Baixe e extraia AgroClima_Codigo.zip. Execute instalar.bat e depois executar.bat na pasta extraida.
 
-Código copiado da pasta do aplicativo no PC, sem ambiente virtual, caches, logs ou histórico de leituras.
+Codigo copiado do PC sem ambiente virtual, caches, logs ou historico de leituras.
