@@ -35,7 +35,7 @@ class MainWindow(QMainWindow):
         self.cfg_path = self.paths.config
         self.cfg = AppConfig.load(self.cfg_path)
         self.db = Database(self.paths.database)
-        self.setWindowTitle("AgroClima Monitor · Smart Agriculture Monitoring Platform")
+        self.setWindowTitle("AgroClima Monitor")
         self.resize(1366, 768)
         self.setMinimumSize(1150, 680)
 
@@ -502,7 +502,7 @@ class MainWindow(QMainWindow):
 
         def fetch():
             rows, count = self.db.query(**filters)
-            # Mesmo snapshot dos gráficos, integral e ainda sem amostragem.
+
             return rows, count, calculate_statistics(rows)
 
         def failed(_error):

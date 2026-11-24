@@ -14,10 +14,7 @@ from .common import Page, card, label, button
 
 class SettingsPage(Page):
     def __init__(self, cfg, save, connect, disconnect, demo, ports, weather_refresh):
-        super().__init__(
-            "Configurações",
-            "Conexão com o Arduino, localização da plantação e parâmetros do AgroClima.",
-        )
+        super().__init__("Configurações")
         self.fields = {}
 
         c, v = card()

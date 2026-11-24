@@ -5,8 +5,6 @@ QWidget#pageBody { background: #f5f7f6; }
 QLabel { border: none; }
 QFrame#sidebar { background: #103e30; border: none; }
 QLabel#brand { font-size: 27px; font-weight: 700; color: white; }
-QLabel#sidebarSub { font-size: 10px; color: #91b6a4; letter-spacing: 1px; }
-QLabel#sidebarFooter { color: #d3e5db; font-weight: 600; }
 QPushButton#nav { text-align: left; background: transparent; color: #c2d9cd; border: none; border-radius: 8px; padding: 13px 10px; font-size: 14px; }
 QPushButton#nav:hover { background: #1c503e; }
 QPushButton#nav:checked { background: #2a634b; color: white; font-weight: 600; }

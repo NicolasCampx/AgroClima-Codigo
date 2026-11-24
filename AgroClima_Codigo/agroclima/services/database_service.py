@@ -10,7 +10,6 @@ COLUMNS = "ts,soil_moisture,air_temp,air_humidity,light_pct,rain_forecast_mm,rai
 
 
 class Database:
-    """Persistência SQLite, consultas e exportação em uma única camada."""
 
     @contextmanager
     def connect(self):
@@ -139,7 +138,7 @@ class Database:
             args.extend(["%" + search + "%"] * 2)
         where = " WHERE " + " AND ".join(clauses) if clauses else ""
         with self.connect() as con:
-            con.execute("BEGIN")  # A contagem e as linhas pertencem ao mesmo snapshot.
+            con.execute("BEGIN")
             count = con.execute(
                 "SELECT COUNT(*) FROM readings" + where, args
             ).fetchone()[0]

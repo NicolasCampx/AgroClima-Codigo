@@ -1,6 +1,3 @@
-"""Probabilidade horária e acumulado de 24 h têm classificações independentes."""
-
-
 def classify_probability(probability):
     if probability is None:
         return "Indisponível", "Probabilidade indisponível", "neutral"
@@ -19,7 +16,7 @@ def classify_probability(probability):
 
 
 def classify_volume(amount):
-    # Limites compartilhados: 5 = baixo, 15 = moderado, 30 = elevado.
+
     if amount < 1:
         return "Insignificante", "neutral"
     if amount <= 5:

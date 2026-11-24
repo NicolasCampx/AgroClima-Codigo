@@ -107,7 +107,7 @@ class StatisticsSection(QWidget):
         start = datetime.fromisoformat(filters["start"])
         end = datetime.fromisoformat(filters["end"])
         if period_name == "Personalizado":
-            # O filtro final é exclusivo e inclui todo o último dia selecionado.
+
             period = f"entre {start:%d/%m/%Y} e {end - timedelta(days=1):%d/%m/%Y}"
         elif period_name in ("1 hora", "6 horas", "24 horas", "7 dias", "30 dias"):
             prefix = (

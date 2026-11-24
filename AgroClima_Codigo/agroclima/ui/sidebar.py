@@ -11,10 +11,7 @@ class Sidebar(QFrame):
         v.setContentsMargins(16, 28, 16, 20)
         v.setSpacing(8)
         v.addWidget(label("AgroClima", "brand"))
-        v.addWidget(label("PRECISION AGRICULTURE", "sidebarSub"))
         v.addSpacing(34)
-        v.addWidget(label("ÁREA DE TRABALHO", "sidebarSub"))
-        v.addSpacing(8)
         self.group = QButtonGroup(self)
         items = [
             ("Dashboard", "dashboard"),
@@ -31,5 +28,3 @@ class Sidebar(QFrame):
         self.group.button(0).setChecked(True)
         self.group.idClicked.connect(select)
         v.addStretch()
-        v.addWidget(label("AgroClima Monitor", "sidebarFooter"))
-        v.addWidget(label("Versão 2.0  /  Desktop", "sidebarSub"))

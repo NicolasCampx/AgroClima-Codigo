@@ -9,10 +9,7 @@ from ..services.sampling import sample_rows
 
 class ChartsPage(Page):
     def __init__(self, refresh):
-        super().__init__(
-            "Gráficos",
-            "Explore as tendências dos sensores ambientais ao longo do tempo.",
-        )
+        super().__init__("Gráficos")
         self.period = QComboBox()
         self.period.addItems(
             [

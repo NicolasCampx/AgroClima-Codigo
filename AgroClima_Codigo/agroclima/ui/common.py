@@ -61,7 +61,7 @@ def card():
 
 
 class Page(QScrollArea):
-    def __init__(self, title, subtitle):
+    def __init__(self, title, subtitle=""):
         super().__init__()
         self.setWidgetResizable(True)
         self.setFrameShape(QFrame.NoFrame)
@@ -72,4 +72,5 @@ class Page(QScrollArea):
         self.layout.setContentsMargins(26, 22, 26, 24)
         self.layout.setSpacing(18)
         self.layout.addWidget(label(title, "pageTitle"))
-        self.layout.addWidget(label(subtitle, "muted"))
+        if subtitle:
+            self.layout.addWidget(label(subtitle, "muted"))

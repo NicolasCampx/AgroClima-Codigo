@@ -1,11 +1,8 @@
-"""Estatísticas populacionais reutilizáveis, independentes de Qt e SQLite."""
-
 from dataclasses import dataclass
 from math import isfinite
 from statistics import pstdev
 
 
-# Índices do resultado de Database.query; cada variável tem sua própria base.
 SENSOR_COLUMNS = {
     "soil_moisture": 1,
     "air_humidity": 3,
@@ -40,14 +37,13 @@ def population_statistics(values):
     numbers = [
         number for value in values if (number := valid_number(value)) is not None
     ]
-    # pstdev usa N (não N-1) e evita a subtração instável E[x²] - E[x]².
+
     return VariableStatistics(
         len(numbers), pstdev(numbers) if len(numbers) >= 2 else None
     )
 
 
 def calculate_statistics(rows):
-    """Recebe as linhas completas da consulta, antes de qualquer amostragem visual."""
     values = {key: [] for key in SENSOR_COLUMNS}
     count = 0
     for row in rows:

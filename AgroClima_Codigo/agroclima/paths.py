@@ -1,5 +1,3 @@
-"""Caminhos independentes do diretório de trabalho e compatíveis com PyInstaller."""
-
 from dataclasses import dataclass
 from pathlib import Path
 import sys

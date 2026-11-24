@@ -15,7 +15,6 @@ logger = logging.getLogger(__name__)
 
 
 class WeatherError(RuntimeError):
-    """Mensagem segura para a interface, com causa técnica preservada."""
 
     def __init__(self, code, message):
         super().__init__(message)
@@ -162,7 +161,7 @@ class WeatherService:
     def __init__(self, timeout: float = 12.0, session=None):
         self.timeout = timeout
         self.session = session if session is not None else requests.Session()
-        # CA/proxy/netrc de outras instalações não podem mudar este transporte.
+
         self.session.trust_env = False
         self.session.headers.update({"User-Agent": "AgroClima-Monitor/2.0"})
         self.session.verify = certifi.where()

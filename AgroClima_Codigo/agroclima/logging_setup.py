@@ -1,5 +1,3 @@
-"""Logs locais com rotação; não registra payloads seriais ou respostas HTTP."""
-
 import logging
 from logging.handlers import RotatingFileHandler
 import sys

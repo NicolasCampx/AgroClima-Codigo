@@ -11,7 +11,6 @@ class Header(QFrame):
         h.setContentsMargins(26, 16, 26, 16)
         v = QVBoxLayout()
         v.addWidget(label("AgroClima Monitor", "headerTitle"))
-        v.addWidget(label("Sistema Inteligente de Monitoramento Agrícola", "muted"))
         h.addLayout(v)
         h.addStretch()
         self.badge = StatusBadge("Desconectado", "danger")

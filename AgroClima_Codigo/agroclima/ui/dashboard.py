@@ -13,11 +13,7 @@ from ..widgets.status_badge import StatusBadge
 
 class Dashboard(Page):
     def __init__(self):
-        hour = datetime.now().hour
-        super().__init__(
-            "Bom dia" if hour < 12 else "Boa tarde" if hour < 18 else "Boa noite",
-            "Uma visão clara da sua cultura, em tempo real.",
-        )
+        super().__init__("Dashboard")
         self.weather = None
         self.mode = label("Aguardando conexão com o Arduino", "muted")
         self.layout.addWidget(self.mode)

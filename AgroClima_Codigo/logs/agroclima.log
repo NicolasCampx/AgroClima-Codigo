@@ -1,4 +1,0 @@
-2026-11-22 12:43:17,488 INFO agroclima.app: Inicialização do AgroClima Monitor 2.0
-2026-11-22 12:43:18,372 INFO agroclima.services.weather_service: Consulta meteorológica: geocodificação
-2026-11-22 12:43:19,348 INFO agroclima.services.weather_service: Consulta meteorológica: previsão
-2026-11-22 12:59:40,542 INFO agroclima.app: Aplicativo encerrado
